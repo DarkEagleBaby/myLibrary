@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="overlay hidden"></div>
+    <div class="pageTitle"> <h1>Welcome to the library!</h1></div>
+    <div class="bookshelf"></div>
+    <!-- user interface -->
+    <div class="interface hidden">
+        <!-- forms to input new book -->
+        <div class="newBookInfo">
+            <div class="newAuthor newBookForm">
+            <input type="text" name="author" placeholder="author" required>
+            </div>
+            <div class="newTitle newBookForm">
+            <input type="text" name="newTitle" placeholder="Title" required>
+            </div>
+            <div class="newNoPages newBookForm">
+            <input type="number" name="NoPages" placeholder="No. of pages" required>
+            </div>
+            <div class="newBookForm ">
+                <div class="newRating">
+                <h3>Your rating:</h3>
+                <select name="Rating" id="bookRating">
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
+                </select>
+                </div>
+            </div>
+            <div class="newBookForm newHasBeenRead">
+                <span>have you read it?</span>
+                    <input type="checkbox">
+                 </div>
+            <div class="newBookForm Submit">
+                <input type="submit" value="Submit!">
+
+            </div>
+        </div>
+        <!-- button to hide the interface -->
+        <button class="hide">hide</button>
+    </div>
+    <!-- button to show interface -->
+    <div class="showInterface">
+        <button class="show newBook">Add Book</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
