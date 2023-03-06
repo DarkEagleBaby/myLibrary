@@ -5,18 +5,32 @@ const interface = document.querySelector('.interface')
 const showInterface = document.querySelector('.showInterface')
 const show = document.querySelector('.show')
 const overlay = document.querySelector('.overlay')
+const body = document.querySelector('body')
 
-hideButton.addEventListener('click',()=>{
+// function for when to show interface and when to hide. 
+// if argument is false - will hide interface. if true will show
+
+function bookAdd(show){
+    if(show){interface.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    showInterface.classList.add('hideShow')}
+
+    if(!show){
     interface.classList.add('hidden');
     overlay.classList.add('hidden')
     showInterface.classList.remove('hideShow')
+    }
+}
 
+hideButton.addEventListener('click',()=>{
+bookAdd(false);
 })
 
 show.addEventListener('click',()=>{
-    interface.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-    showInterface.classList.add('hideShow')
+ bookAdd(true)
+    body.addEventListener('click',(e)=>{
+        if(e.target===overlay){
+            bookAdd(false)}})
 })
 
 // code for adding and showing new books
